@@ -1,0 +1,39 @@
+<div class="form-group">
+  <h2>Criar minha conta</h2>
+
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div>
+      <input
+        placeholder="Nome"
+        type="text"
+        name="name"
+        id="name"
+        [(ngModel)]="account.name"
+        required
+      />
+    </div>
+    <div>
+      <input
+        placeholder="E-mail"
+        type="email"
+        name="email"
+        id="email"
+        [(ngModel)]="account.email"
+        required
+      />
+    </div>
+    <div>
+      <input
+        placeholder="Senha"
+        type="password"
+        name="password"
+        id="password"
+        [(ngModel)]="account.password"
+        required
+      />
+    </div>
+    <button type="submit" class="block" [disabled]="form.form.invalid">
+      Criar minha conta
+    </button>
+  </form>
+</div>
